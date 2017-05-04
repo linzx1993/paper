@@ -11,8 +11,8 @@ header{
   //width: 100%;
   background-color: #fff;
   .header-wrap{
-    display: flex;
-    justify-content:space-between;
+    //display: flex;
+    //justify-content:space-between;
   }
   .logo{
     margin-left: 100px;
@@ -20,7 +20,7 @@ header{
     height: 100px;
   }
   .header-nav{
-    width: 500px;
+    width: 400px;
     ul{
       display: flex;
     }

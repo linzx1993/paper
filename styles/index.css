@@ -137,15 +137,12 @@ body {
 
 header {
   background-color: #fff; }
-  header .header-wrap {
-    display: flex;
-    justify-content: space-between; }
   header .logo {
     margin-left: 100px;
     width: 210px;
     height: 100px; }
   header .header-nav {
-    width: 500px; }
+    width: 400px; }
     header .header-nav ul {
       display: flex; }
     header .header-nav .header-nav-li a {
