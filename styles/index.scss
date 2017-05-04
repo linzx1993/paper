@@ -39,8 +39,28 @@ header{
   }
 }
 .index-banner{
+  position: relative;
+  background: url("../assert/images/banner.jpg") no-repeat  50% 50% scroll;
+  background-size: cover;
+  .banner-wrap{
+    height: 596px;
+  }
   img{
     height: 596px;
+  }
+  .banner-word{
+    position: absolute;
+    left: 100px;
+    top: 400px;
+    color: #fff;
+    .banner-title{
+      margin-bottom: 5px;
+      font-size: 34px;
+      font-weight: normal;
+    }
+    .banner-text{
+
+    }
   }
 }
 .product-list{

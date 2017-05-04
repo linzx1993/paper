@@ -156,8 +156,23 @@ header {
       header .header-nav .header-nav-li:hover a, header .header-nav .header-nav-li.active a {
         color: #fff; }
 
-.index-banner img {
-  height: 596px; }
+.index-banner {
+  position: relative;
+  background: url("../assert/images/banner.jpg") no-repeat 50% 50% scroll;
+  background-size: cover; }
+  .index-banner .banner-wrap {
+    height: 596px; }
+  .index-banner img {
+    height: 596px; }
+  .index-banner .banner-word {
+    position: absolute;
+    left: 100px;
+    top: 400px;
+    color: #fff; }
+    .index-banner .banner-word .banner-title {
+      margin-bottom: 5px;
+      font-size: 34px;
+      font-weight: normal; }
 
 .product-list {
   height: 437px;
