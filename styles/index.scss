@@ -1,5 +1,5 @@
 @import "resetStyle.scss";
-@import "leftside.scss";
+@import "common";
 @import "aboutUs.scss";
 body{
   line-height: 1.41;
@@ -161,4 +161,10 @@ header{
   margin: 30px 0;
   padding: 30px 60px;
   background-color: #fff;
+}
+.news_title{
+  padding-bottom: 30px;
+  text-align: center;
+  color: $themeColor;
+  font-size: 18px;
 }

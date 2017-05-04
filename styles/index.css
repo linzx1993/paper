@@ -13,6 +13,7 @@
 .c-theme-color {
   color: #1cacf4; }
 
+/***********************关于我们--左边目录栏********************/
 .about-nav {
   width: 195px;
   text-align: center;
@@ -44,6 +45,13 @@
     text-decoration: none;
     background-color: #eee; }
 
+.sub_text {
+  padding: 9px 0;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: left;
+  color: #666; }
+
 /*常用颜色*/
 /*主题色#1cacf4*/
 /*表格灰框颜色*/
@@ -63,8 +71,9 @@
 
 .about-content {
   padding: 30px 50px;
-  background: #fff;
   min-height: 783px;
+  min-width: 795px;
+  background: #fff;
   overflow: hidden; }
 
 .about-us h2 {
@@ -87,12 +96,6 @@
   background-image: url("../assert/images/hezuo.png"); }
 .about-us .location {
   background-image: url("../assert/images/location.png"); }
-.about-us .sub_text {
-  padding: 9px 0;
-  font-size: 14px;
-  line-height: 28px;
-  text-align: left;
-  color: #666; }
 
 .zhizhao {
   display: block;
@@ -244,5 +247,21 @@ header {
   width: 345px; }
 
 /***********************关于我们********************/
+/***********************新闻列表********************/
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative; }
+
+.news-box {
+  margin: 30px 0;
+  padding: 30px 60px;
+  background-color: #fff; }
+
+.news_title {
+  padding-bottom: 30px;
+  text-align: center;
+  color: #1cacf4;
+  font-size: 18px; }
 
 /*# sourceMappingURL=index.css.map */

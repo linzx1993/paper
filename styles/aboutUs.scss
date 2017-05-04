@@ -11,8 +11,9 @@
 }
 .about-content{
   padding: 30px 50px;
-  background: #fff;
   min-height: 783px;
+  min-width: 795px;
+  background: #fff;
   overflow: hidden;
 }
 .about-us{
@@ -41,13 +42,6 @@
   }
   .location{
     background-image: url("../assert/images/location.png");
-  }
-  .sub_text{
-    padding: 9px 0;
-    font-size: 14px;
-    line-height: 28px;
-    text-align: left;
-    color: #666;
   }
 }
 .zhizhao{
