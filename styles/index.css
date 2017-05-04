@@ -1,0 +1,236 @@
+@charset "UTF-8";
+/*常用颜色*/
+/*主题色#1cacf4*/
+/*表格灰框颜色*/
+/*标题栏背景灰色*/
+.c-theme-color {
+  color: #1cacf4; }
+
+/*常用颜色*/
+/*主题色#1cacf4*/
+/*表格灰框颜色*/
+/*标题栏背景灰色*/
+.c-theme-color {
+  color: #1cacf4; }
+
+.about-nav {
+  width: 195px;
+  text-align: center;
+  padding-bottom: 15px;
+  background-color: #fff; }
+  .about-nav h3 {
+    padding-top: 32px;
+    height: 50px;
+    color: #1cacf4;
+    font-size: 18px; }
+    .about-nav h3 span {
+      padding: 0 5px;
+      background-color: #fff; }
+  .about-nav hr {
+    margin: 0 auto -0.7143em;
+    width: 190px;
+    border: 0;
+    border-top: 1px solid #6fcaf8; }
+  .about-nav .about-nav-li a {
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    color: #666;
+    font-size: 14px; }
+  .about-nav .about-nav-li.active a {
+    background-color: #1cacf4;
+    color: #fff; }
+  .about-nav .about-nav-li:hover {
+    text-decoration: none;
+    background-color: #eee; }
+
+/*常用颜色*/
+/*主题色#1cacf4*/
+/*表格灰框颜色*/
+/*标题栏背景灰色*/
+.c-theme-color {
+  color: #1cacf4; }
+
+.about-body {
+  background: url("../assert/images/about_bg.jpg") no-repeat center top;
+  background-attachment: fixed;
+  background-size: cover; }
+
+.main-content {
+  display: flex;
+  width: 1000px;
+  margin: 30px auto; }
+
+.about-content {
+  padding: 30px 50px;
+  background: #fff;
+  min-height: 783px;
+  overflow: hidden; }
+
+.about-us h2 {
+  font-size: 18px;
+  color: #1cacf4; }
+.about-us h3 {
+  margin: 20px 0 5px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #1cacf4; }
+.about-us .contact_title {
+  padding-left: 28px;
+  background-repeat: no-repeat;
+  background-size: 24px; }
+.about-us .service {
+  background-image: url("../assert/images/service.png"); }
+.about-us .teamwork {
+  background-image: url("../assert/images/hezuo.png"); }
+.about-us .location {
+  background-image: url("../assert/images/location.png"); }
+.about-us .sub_text {
+  padding: 9px 0;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: left;
+  color: #666; }
+
+.zhizhao {
+  display: block;
+  margin: 0 auto;
+  width: 387px;
+  height: 543px; }
+
+/*==========加入我们============*/
+.tab-menu-list {
+  line-height: 40px;
+  font-size: 14px;
+  border-bottom: 2px solid #1cacf4; }
+  .tab-menu-list li:hover {
+    background-color: #eee; }
+  .tab-menu-list li.active {
+    background-color: #1cacf4; }
+    .tab-menu-list li.active a {
+      color: #fff; }
+  .tab-menu-list li a {
+    padding: 0 8px; }
+
+.tab-content .tab-list > li {
+  display: none; }
+  .tab-content .tab-list > li.active {
+    display: block; }
+  .tab-content .tab-list > li .help_title {
+    height: 24px;
+    line-height: 24px;
+    font-size: 16px; }
+  .tab-content .tab-list > li.active .help_title {
+    color: #1cacf4; }
+.tab-content ol {
+  padding-left: 2em;
+  color: #666; }
+  .tab-content ol li {
+    height: 24px;
+    line-height: 24px; }
+
+body {
+  line-height: 1.41;
+  color: #333; }
+
+header {
+  background-color: #fff; }
+  header .header-wrap {
+    display: flex;
+    justify-content: space-between; }
+  header .logo {
+    margin-left: 100px;
+    width: 210px;
+    height: 100px; }
+  header .header-nav {
+    width: 500px; }
+    header .header-nav ul {
+      display: flex; }
+    header .header-nav .header-nav-li a {
+      padding: 42px 20px;
+      border-radius: 1px; }
+    header .header-nav .header-nav-li:hover, header .header-nav .header-nav-li.active {
+      background-color: #1cacf4; }
+      header .header-nav .header-nav-li:hover a, header .header-nav .header-nav-li.active a {
+        color: #fff; }
+
+.index-banner img {
+  height: 596px; }
+
+.product-list {
+  height: 437px;
+  padding-top: 80px;
+  background-color: #f5f5f5; }
+  .product-list ul {
+    display: flex;
+    justify-content: space-around; }
+  .product-list li {
+    width: 226px;
+    height: 145px; }
+  .product-list h6 {
+    font-size: 18px; }
+  .product-list p {
+    color: #696969; }
+
+.theme-btn {
+  width: 150px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: #fff;
+  background-color: #1cacf4;
+  border-radius: 10px; }
+
+.banner-middle {
+  height: 312px; }
+
+.product-slide {
+  margin: 110px auto 30px;
+  display: flex;
+  justify-content: space-between; }
+  .product-slide .mac-box {
+    width: 545px;
+    height: 439px;
+    background: url("../assert/images/mac.png") no-repeat;
+    background-size: cover; }
+    .product-slide .mac-box .slide-box {
+      margin-top: 22px;
+      width: 507px;
+      height: 281px; }
+
+.slider-right {
+  margin-top: 95px;
+  width: 425px; }
+  .slider-right h6 {
+    font-weight: normal;
+    font-size: 34px; }
+  .slider-right p {
+    color: #a9a9a9; }
+
+.footer {
+  height: 300px;
+  color: #696969;
+  background: url("../assert/images/footer-bg.png") repeat 50% 50%;
+  background-attachment: scroll; }
+  .footer .wrap {
+    padding-top: 90px;
+    display: flex;
+    justify-content: space-around; }
+  .footer h6 {
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #ccc; }
+  .footer .concat-way {
+    display: flex;
+    flex-direction: column; }
+    .footer .concat-way span {
+      line-height: 24px; }
+
+.footer-middle {
+  width: 345px; }
+
+/***********************关于我们********************/
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,133 @@
+@import "resetStyle.scss";
+@import "leftside.scss";
+@import "aboutUs.scss";
+body{
+  line-height: 1.41;
+  color: #333;
+}
+header{
+  //position: absolute;
+  //top: 0;
+  //width: 100%;
+  background-color: #fff;
+  .header-wrap{
+    display: flex;
+    justify-content:space-between;
+  }
+  .logo{
+    margin-left: 100px;
+    width: 210px;
+    height: 100px;
+  }
+  .header-nav{
+    width: 500px;
+    ul{
+      display: flex;
+    }
+    .header-nav-li{
+      a{
+        padding: 42px 20px;
+        border-radius: 1px;
+      }
+      &:hover,&.active{
+        a{
+          color: #fff;
+        }
+        background-color: $themeColor;
+      }
+    }
+  }
+}
+.index-banner{
+  img{
+    height: 596px;
+  }
+}
+.product-list{
+  height: 437px;
+  padding-top: 80px;
+  background-color: #f5f5f5;
+  ul{
+    display: flex;
+    justify-content: space-around;
+  }
+  li{
+    width: 226px;
+    height: 145px;
+  }
+  h6{
+    font-size: 18px;
+  }
+  p{
+    color: $gray
+  }
+}
+.theme-btn{
+  width: 150px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: #fff;
+  background-color: $themeColor;
+  border-radius: 10px;
+}
+.banner-middle{
+  height: 312px;
+}
+.product-slide{
+  margin: 110px auto 30px;
+  display: flex;
+  justify-content: space-between;
+  .mac-box{
+    width: 545px;
+    height: 439px;
+    background: url("../assert/images/mac.png") no-repeat;
+    background-size: cover;
+    .slide-box{
+      margin-top: 22px;
+      width: 507px;
+      height: 281px;
+      .swiper-wrapper{
+        //margin: 22px auto 0;
+      }
+    }
+  }
+}
+.slider-right{
+  margin-top: 95px;
+  width: 425px;
+  h6{
+    font-weight: normal;
+    font-size: 34px;
+  }
+  p{
+    color: $litter-gray;
+  }
+}
+.footer{
+  height: 300px;
+  color: $gray;
+  .wrap{
+    padding-top: 90px;
+    display: flex;
+    justify-content: space-around;
+  }
+  h6{
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #ccc;
+  }
+  .concat-way{
+    display: flex;
+    flex-direction: column;
+    span{
+      line-height: 24px;
+    }
+  }
+  background: url("../assert/images/footer-bg.png") repeat 50% 50%;
+  background-attachment: scroll;
+}
+.footer-middle{
+  width: 345px;
+}
+/***********************关于我们********************/
