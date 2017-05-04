@@ -13,66 +13,19 @@
 .c-theme-color {
   color: #1cacf4; }
 
-/***********************关于我们--左边目录栏********************/
-.about-nav {
-  width: 195px;
-  text-align: center;
-  padding-bottom: 15px;
-  background-color: #fff; }
-  .about-nav h3 {
-    padding-top: 32px;
-    height: 50px;
-    color: #1cacf4;
-    font-size: 18px; }
-    .about-nav h3 span {
-      padding: 0 5px;
-      background-color: #fff; }
-  .about-nav hr {
-    margin: 0 auto -0.7143em;
-    width: 190px;
-    border: 0;
-    border-top: 1px solid #6fcaf8; }
-  .about-nav .about-nav-li a {
-    display: block;
-    height: 42px;
-    line-height: 42px;
-    color: #666;
-    font-size: 14px; }
-  .about-nav .about-nav-li.active a {
-    background-color: #1cacf4;
-    color: #fff; }
-  .about-nav .about-nav-li:hover {
-    text-decoration: none;
-    background-color: #eee; }
-
-.sub_text {
-  padding: 9px 0;
-  font-size: 14px;
-  line-height: 28px;
-  text-align: left;
-  color: #666; }
-
-/*常用颜色*/
-/*主题色#1cacf4*/
-/*表格灰框颜色*/
-/*标题栏背景灰色*/
-.c-theme-color {
-  color: #1cacf4; }
-
 .about-body {
-  background: url("../assert/images/about_bg.jpg") no-repeat center top;
-  background-attachment: fixed;
+  background: url("../assert/images/about_bg.jpg") no-repeat center top fixed;
   background-size: cover; }
 
 .main-content {
-  display: flex;
   width: 1000px;
   margin: 30px auto; }
 
 .about-content {
+  float: left;
   padding: 30px 50px;
   min-height: 783px;
-  min-width: 795px;
+  width: 795px;
   background: #fff;
   overflow: hidden; }
 
@@ -178,11 +131,9 @@ header {
   height: 437px;
   padding-top: 80px;
   background-color: #f5f5f5; }
-  .product-list ul {
-    display: flex;
-    justify-content: space-around; }
   .product-list li {
-    width: 226px;
+    width: 25%;
+    padding: 0 25px;
     height: 145px; }
   .product-list h6 {
     font-size: 18px; }
@@ -202,9 +153,7 @@ header {
   height: 312px; }
 
 .product-slide {
-  margin: 110px auto 30px;
-  display: flex;
-  justify-content: space-between; }
+  margin: 110px auto 30px; }
   .product-slide .mac-box {
     width: 545px;
     height: 439px;
@@ -227,18 +176,16 @@ header {
 .footer {
   height: 300px;
   color: #696969;
-  background: url("../assert/images/footer-bg.png") repeat 50% 50%;
-  background-attachment: scroll; }
+  background: url("../assert/images/footer-bg.png") repeat 50% 50% scroll; }
   .footer .wrap {
-    padding-top: 90px;
-    display: flex;
-    justify-content: space-around; }
+    padding-top: 90px; }
+  .footer section {
+    width: 30%; }
   .footer h6 {
     margin-bottom: 30px;
     font-size: 16px;
     color: #ccc; }
   .footer .concat-way {
-    display: flex;
     flex-direction: column; }
     .footer .concat-way span {
       line-height: 24px; }
@@ -249,14 +196,15 @@ header {
 /***********************关于我们********************/
 /***********************新闻列表********************/
 .container {
-  width: 1000px;
+  position: relative;
   margin: 0 auto;
-  position: relative; }
+  width: 1000px;
+  min-height: 500px;
+  background-color: #fff; }
 
 .news-box {
   margin: 30px 0;
-  padding: 30px 60px;
-  background-color: #fff; }
+  padding: 30px 60px; }
 
 .news_title {
   padding-bottom: 30px;

@@ -1,18 +1,18 @@
 @import "resetStyle.scss";
 .about-body{
-  background: url("../assert/images/about_bg.jpg") no-repeat center top;
-  background-attachment: fixed;
+  background: url("../assert/images/about_bg.jpg") no-repeat center top fixed;
   background-size: cover;
 }
 .main-content{
-  display: flex;
+  //display: flex;
   width: 1000px;
   margin: 30px auto;
 }
 .about-content{
+  float: left;
   padding: 30px 50px;
   min-height: 783px;
-  min-width: 795px;
+  width: 795px;
   background: #fff;
   overflow: hidden;
 }
