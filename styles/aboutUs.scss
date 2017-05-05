@@ -98,3 +98,25 @@
     }
   }
 }
+/*==========产品列表============*/
+.product-list li{
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 0 4px #eee;
+  a{
+    width: 180px;
+    height: 150px;
+  }
+}
+.product-des{
+  width: 500px;
+  height: 150px;
+  padding: 15px 5px;
+  p{
+    font-size: 14px;
+    line-height: 28px;
+    text-align: left;
+    color: #666;
+  }
+}

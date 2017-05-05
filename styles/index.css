@@ -87,27 +87,29 @@
     height: 24px;
     line-height: 24px; }
 
+/*==========产品列表============*/
+.product-list li {
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 0 4px #eee; }
+  .product-list li a {
+    width: 180px;
+    height: 150px; }
+
+.product-des {
+  width: 500px;
+  height: 150px;
+  padding: 15px 5px; }
+  .product-des p {
+    font-size: 14px;
+    line-height: 28px;
+    text-align: left;
+    color: #666; }
+
 body {
   line-height: 1.41;
   color: #333; }
-
-header {
-  background-color: #fff; }
-  header .logo {
-    margin-left: 100px;
-    width: 210px;
-    height: 100px; }
-  header .header-nav {
-    width: 400px; }
-    header .header-nav ul {
-      display: flex; }
-    header .header-nav .header-nav-li a {
-      padding: 42px 20px;
-      border-radius: 1px; }
-    header .header-nav .header-nav-li:hover, header .header-nav .header-nav-li.active {
-      background-color: #1cacf4; }
-      header .header-nav .header-nav-li:hover a, header .header-nav .header-nav-li.active a {
-        color: #fff; }
 
 .index-banner {
   position: relative;
@@ -173,37 +175,17 @@ header {
   .slider-right p {
     color: #a9a9a9; }
 
-.footer {
-  height: 300px;
-  color: #696969;
-  background: url("../assert/images/footer-bg.png") repeat 50% 50% scroll; }
-  .footer .wrap {
-    padding-top: 90px; }
-  .footer section {
-    width: 30%; }
-  .footer h6 {
-    margin-bottom: 30px;
-    font-size: 16px;
-    color: #ccc; }
-  .footer .concat-way {
-    flex-direction: column; }
-    .footer .concat-way span {
-      line-height: 24px; }
-
-.footer-middle {
-  width: 345px; }
-
 /***********************关于我们********************/
 /***********************新闻列表********************/
 .container {
+  margin: 30px auto;
+  padding: 20px 30px;
   position: relative;
-  margin: 0 auto;
   width: 1000px;
   min-height: 500px;
   background-color: #fff; }
 
 .news-box {
-  margin: 30px 0;
   padding: 30px 60px; }
 
 .news_title {
@@ -211,5 +193,19 @@ header {
   text-align: center;
   color: #1cacf4;
   font-size: 18px; }
+
+.news-list li {
+  padding-right: 10px;
+  height: 46px;
+  line-height: 46px;
+  border-bottom: 1px dashed #eee;
+  list-style: disc;
+  list-style-position: inside;
+  color: #1cacf4; }
+  .news-list li span {
+    float: right;
+    color: #999; }
+  .news-list li a {
+    color: #666; }
 
 /*# sourceMappingURL=index.css.map */

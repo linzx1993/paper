@@ -1,4 +1,72 @@
 @import "resetStyle.scss";
+/***********************头部********************/
+header{
+  //position: absolute;
+  //top: 0;
+  //width: 100%;
+  background-color: #fff;
+  .header-wrap{
+    //display: flex;
+    //justify-content:space-between;
+  }
+  .logo{
+    margin-left: 100px;
+    width: 210px;
+    height: 100px;
+  }
+  .header-nav{
+    width: 400px;
+    ul{
+      display: flex;
+    }
+    .header-nav-li{
+      a{
+        padding: 42px 20px;
+        border-radius: 1px;
+      }
+      &:hover,&.active{
+        a{
+          color: #fff;
+        }
+        background-color: $themeColor;
+      }
+    }
+  }
+}
+/***********************底部********************/
+.footer{
+  height: 300px;
+  color: $gray;
+  .wrap{
+    padding-top: 90px;
+    //display: flex;
+    //justify-content: space-around;
+  }
+  section{
+    width: 30%;
+  }
+  h6{
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #ccc;
+  }
+  .concat-way{
+    //display: flex;
+    flex-direction: column;
+    span{
+      line-height: 24px;
+    }
+  }
+  background: url("../assert/images/footer-bg.png") repeat 50% 50% scroll;
+}
+.footer-middle{
+  width: 345px;
+}
+.page_title{
+  height: 50px;
+  color: $themeColor;
+  font-size: 18px;
+}
 /***********************关于我们--左边目录栏********************/
 .about-nav{
   float: left;

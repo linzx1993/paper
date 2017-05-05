@@ -5,39 +5,6 @@ body{
   line-height: 1.41;
   color: #333;
 }
-header{
-  //position: absolute;
-  //top: 0;
-  //width: 100%;
-  background-color: #fff;
-  .header-wrap{
-    //display: flex;
-    //justify-content:space-between;
-  }
-  .logo{
-    margin-left: 100px;
-    width: 210px;
-    height: 100px;
-  }
-  .header-nav{
-    width: 400px;
-    ul{
-      display: flex;
-    }
-    .header-nav-li{
-      a{
-        padding: 42px 20px;
-        border-radius: 1px;
-      }
-      &:hover,&.active{
-        a{
-          color: #fff;
-        }
-        background-color: $themeColor;
-      }
-    }
-  }
-}
 .index-banner{
   position: relative;
   background: url("../assert/images/banner.jpg") no-repeat  50% 50% scroll;
@@ -126,45 +93,17 @@ header{
     color: $litter-gray;
   }
 }
-.footer{
-  height: 300px;
-  color: $gray;
-  .wrap{
-    padding-top: 90px;
-    //display: flex;
-    //justify-content: space-around;
-  }
-  section{
-    width: 30%;
-  }
-  h6{
-    margin-bottom: 30px;
-    font-size: 16px;
-    color: #ccc;
-  }
-  .concat-way{
-    //display: flex;
-    flex-direction: column;
-    span{
-      line-height: 24px;
-    }
-  }
-  background: url("../assert/images/footer-bg.png") repeat 50% 50% scroll;
-}
-.footer-middle{
-  width: 345px;
-}
 /***********************关于我们********************/
 /***********************新闻列表********************/
 .container{
+  margin: 30px auto;
+  padding: 20px 30px;
   position: relative;
-  margin: 0 auto;
   width: 1000px;
   min-height: 500px;
   background-color: #fff;
 }
 .news-box{
-  margin: 30px 0;
   padding: 30px 60px;
   //background-color: #fff;
 }
@@ -174,4 +113,20 @@ header{
   text-align: center;
   color: $themeColor;
   font-size: 18px;
+}
+.news-list li{
+  span{
+    float: right;
+    color: #999;
+  }
+  a{
+    color: #666;
+  }
+  padding-right: 10px;
+  height: 46px;
+  line-height: 46px;
+  border-bottom: 1px dashed #eee;
+  list-style: disc;
+  list-style-position: inside;
+  color: $themeColor;
 }
