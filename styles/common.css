@@ -25,6 +25,10 @@ header {
       header .header-nav .header-nav-li:hover a, header .header-nav .header-nav-li.active a {
         color: #fff; }
 
+/*******************************************/
+.swiper-pagination span {
+  cursor: pointer; }
+
 /***********************底部********************/
 .footer {
   height: 300px;
