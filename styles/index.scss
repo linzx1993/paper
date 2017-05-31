@@ -51,6 +51,16 @@ body{
     color: $gray
   }
 }
+.product-index-nav img{
+  position: relative;
+  top: 0;
+  transition: top .5s;
+  &:hover{
+    top: -3px;
+    box-shadow: 1px 1px 18px #999;
+    transition: top .5s;
+  }
+}
 .theme-btn{
   width: 150px;
   height: 35px;
@@ -76,6 +86,14 @@ body{
       margin-top: 22px;
       width: 507px;
       height: 281px;
+      img{
+        transform: scale(1);
+        transition: transform .5s;
+        &:hover{
+          transform: scale(1.2);
+          transition: transform .5s;
+        }
+      }
       .swiper-wrapper{
         //margin: 22px auto 0;
       }

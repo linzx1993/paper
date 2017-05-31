@@ -41,6 +41,15 @@ body {
   .product-list p {
     color: #696969; }
 
+.product-index-nav img {
+  position: relative;
+  top: 0;
+  transition: top .5s; }
+  .product-index-nav img:hover {
+    top: -3px;
+    box-shadow: 1px 1px 18px #999;
+    transition: top .5s; }
+
 .theme-btn {
   width: 150px;
   height: 35px;
@@ -64,6 +73,12 @@ body {
       margin-top: 22px;
       width: 507px;
       height: 281px; }
+      .product-slide .mac-box .slide-box img {
+        transform: scale(1);
+        transition: transform .5s; }
+        .product-slide .mac-box .slide-box img:hover {
+          transform: scale(1.2);
+          transition: transform .5s; }
 
 .slider-right {
   margin-top: 95px;
