@@ -67,6 +67,9 @@ body{
     line-height: 30px;
     text-align: center;
     vertical-align: middle;
+    &:hover{
+      color: $themeColor;
+    }
     &.active{
       background-color: $themeColor;
       color: #fff;
@@ -84,6 +87,7 @@ body{
     margin: 0 10px;
     width: calc(25% - 20px);
     padding: 20px 15px 20px;
+    text-align: center;
     background-color: #fff;
     transform: translate3d(0, 0, 0);
     transition: transform .5s;
