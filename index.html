@@ -3,94 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="翔飞,shinefeel">
-    <meta name="description" content="H翔飞公司">
+    <meta name="description" content="龙游翔飞进出口有限公司">
     <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/swiper.min.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/common.css">
-    <link rel="stylesheet" href="./styles/swiper.min.css">
     <link rel="icon" href="./assert/images/favicon.png" />
     <title>浙江龙游翔飞有限公司</title>
-    <style>
-        header{
-            position: fixed;
-            top:0;
-            left: 0;
-            z-index: 10000;
-            background-color: #fff;
-            width: 100%;
-        }
-        body{
-            padding-top: 108px;
-        }
-        .product-list li{
-            width: calc(25% - 50px);
-            margin: 0 20px;
-            padding: 0;
-        }
-    </style>
 </head>
 <body>
-<header class="header">
-    <div class="wrap header-wrap">
-        <a class="fl logo" href="">
-            <img class="wqd-img" src="assert/images/logo.png">
-        </a>
-        <nav class="fr header-nav">
-            <ul class="">
-                <li class="fl header-nav-li active"><a href="./index.html">首页</a></li>
-                <li class="fl header-nav-li"><a href="view/aboutUs/company.html">关于我们</a></li>
-                <li class="fl header-nav-li"><a href="view/news/news.html">新闻资讯</a></li>
-                <li class="fl header-nav-li"><a href="view/product/product-introduce.html">产品介绍</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-<section class="index-banner">
-    <div class="">
-        <!--<div class="">-->
-            <!--<img src="./assert/images/banner.jpg" alt="">-->
-            <div class="wrap banner-wrap">
-                <div class="banner-word">
-                    <h3 class="banner-title">您的问题，我们帮您一站搞定</h3>
-                    <p class="banner-text">20多家世界五百强客户，成熟的客户督促我们成长。<br/>以全情的投入，达成严苛的标准。</p>
-                </div>
-            </div>
-        <!--</div>-->
-    </div>
-</section>
-<section class="product-list product-index-nav">
-    <nav class="wrap">
-        <ul class="clearfix">
-            <li class="fl">
-                <img src="assert/images/blank.gif" alt="" data-echo="assert/images/a.jpg">
-                <h6 class="mb-5 mt-10">纸巾产品A</h6><p class="mb-15">翔飞的纸巾采用A技术，A泉的自来水和B地的木头</p><a class="theme-btn" href="./view/product/product-introduce.html">了解详情</a>
-            </li>
-            <li class="fl">
-                <img src="assert/images/blank.gif" alt="" data-echo="assert/images/b.jpg">
-                <h6 class="mb-5 mt-10">纸巾产品B</h6><p class="mb-15">翔飞的纸巾采用A技术，A泉的自来水和B地的木头</p><a class="theme-btn" href="./view/product/product-introduce.html">了解详情</a>
-            </li>
-            <li class="fl">
-                <img src="assert/images/blank.gif" alt="" data-echo="assert/images/c.jpg">
-                <h6 class="mb-5 mt-10">纸巾产品C</h6><p class="mb-15">翔飞的纸巾采用A技术，A泉的自来水和B地的木头</p><a class="theme-btn" href="./view/product/product-introduce.html">了解详情</a>
-            </li>
-            <li class="fl">
-                <img src="assert/images/blank.gif" alt="" data-echo="assert/images/d.jpg">
-                <h6 class="mb-5 mt-10">纸巾产品D</h6><p class="mb-15">翔飞的纸巾采用A技术，A泉的自来水和B地的木头</p><a class="theme-btn" href="./view/product/product-introduce.html">了解详情</a>
-            </li>
-        </ul>
-    </nav>
-</section>
-<section class="banner-middle">
-    <img src="assert/images/blank.gif" data-echo="assert/images/banner-middle.jpg" alt="">
-</section>
-<section class="product-slide wrap clearfix">
-    <section class="fl mac-box">
-        <div class="slide-box swiper-container">
-            <div class="swiper-wrapper">
+<style>
+    header{
+        position: fixed;
+        top:0;
+        left: 0;
+        z-index: 10000;
+        background-color: #fff;
+        width: 100%;
+    }
+    body{
+        padding-top: 108px;
+    }
+    .product-list li{
+        width: calc(25% - 50px);
+        margin: 0 20px;
+        padding: 0;
+    }
+</style>
+<div id="app">
+    <test></test>
+    <section class="index-banner">
+        <div class="swiper-container">
+            <div class="wrap banner-wrap swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="assert/images/blank.gif" data-echo="assert/images/mac-b.jpg" alt="">
+                    <!--<h3 class="banner-title">您的问题，我们帮您一站搞定</h3>-->
+                    <!--<p class="banner-text">20多家世界五百强客户，成熟的客户督促我们成长。<br/>以全情的投入，达成严苛的标准。</p>-->
+                    <img src="./assert/images/banner.jpg" alt="">
                 </div>
-                <div class="swiper-slide"><img src="assert/images/blank.gif" data-echo="assert/images/mac-a.jpg" alt=""></div>
+                <div class="swiper-slide">
+                    <img src="./assert/images/banner-zhaopin.jpg" alt="">
+                </div>
             </div>
             <!-- 如果需要分页器 -->
             <div class="swiper-pagination"></div>
@@ -98,34 +50,92 @@
             <!-- 如果需要导航按钮 -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
+            <!--</div>-->
         </div>
     </section>
-    <article class="fr slider-right">
-        <h6 class="mb-25">30年的风雨兼程</h6>
-        <p class="mb-45">灵感来自亚平宁半岛的小雏菊，如温和的地中海阳光滋养美妙的生活。全新翔飞细韧系列，精选100%优质原生木浆，纸质纯净，更采用全新3D-DECO压花工艺，细腻柔韧，亲肤无刺激，健康更安心，最适合追求健康与安全的您！</p>
-        <a class="theme-btn" href="javascript:;">了解详情</a>
-    </article>
-</section>
-<footer class="footer">
-    <div class="wrap clearfix">
-        <section class="fl concat-way">
-            <h6>联系我们</h6>
-            <span>公司地址 ： 浙江省衢州市龙游县翔飞有限公司地址</span>
-            <span>联系电话 ： 150-6874-6735</span>
-            <span>我要合作 ： 150-6874-6735</span>
+    <section class="wrap index-product-list mb-50">
+        <div class="banner-title">
+            <h3><span class="banner-title-icon"></span>品牌产品
+                <a class="active" href="javascript:;">全部产品</a>
+                <a href="javascript:;">生活用纸</a>
+                <a href="javascript:;">女性护理</a>
+            </h3>
+        </div>
+        <nav>
+            <ul class="clearfix">
+                <li class="fl">
+                    <img src="assert/images/blank.gif" alt="" data-echo="assert/images/paper-product1.jpg">
+                    <h6 class="mb-5 mt-30">纸巾产品A</h6><p class="mt-10 mb-15">翔飞的纸巾采用A技术，A泉的自来水和B地的木头</p><a class="theme-btn" href="./view/product/product-introduce.html">了解详情</a>
+                </li>
+                <li class="fl">
+                    <img src="assert/images/blank.gif" alt="" data-echo="assert/images/b.jpg">
+                    <h6 class="mb-5 mt-30">纸巾产品B</h6><p class="mt-10 mb-15">翔飞的纸巾采用A技术，A泉的自来水和B地的木头</p><a class="theme-btn" href="./view/product/product-introduce.html">了解详情</a>
+                </li>
+                <li class="fl">
+                    <img src="assert/images/blank.gif" alt="" data-echo="assert/images/c.jpg">
+                    <h6 class="mb-5 mt-30">纸巾产品C</h6><p class="mt-10 mb-15">翔飞的纸巾采用A技术，A泉的自来水和B地的木头</p><a class="theme-btn" href="./view/product/product-introduce.html">了解详情</a>
+                </li>
+                <li class="fl">
+                    <img src="assert/images/blank.gif" alt="" data-echo="assert/images/d.jpg">
+                    <h6 class="mb-5 mt-30">纸巾产品D</h6><p class="mt-10 mb-15">翔飞的纸巾采用A技术，A泉的自来水和B地的木头</p><a class="theme-btn" href="./view/product/product-introduce.html">了解详情</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <section class="banner-middle">
+        <img src="assert/images/blank.gif" data-echo="assert/images/banner-middle.jpg" alt="">
+    </section>
+    <section class="product-slide wrap clearfix">
+        <div class="banner-title">
+            <h3><span class="banner-title-icon company" title="公司" alt="翔飞公司"></span>公司历程<a class="active" href="javascript:;">公司历程</a></h3>
+        </div>
+        <section class="fl mac-box">
+            <div class="slide-box swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assert/images/blank.gif" data-echo="assert/images/mac-b.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="assert/images/blank.gif" data-echo="assert/images/mac-a.jpg" alt=""></div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </section>
-        <section class="fl ml-60 footer-middle">
-            <h6>您的成功梦想需要一包非同凡响的纸巾</h6>
-            <p>韧-柔软与结实的出色演绎，纸巾要做到既柔软又结实并不容易，而翔飞产品永远在“韧”上追求卓越表现。全新韧性升级的翔飞超韧系列，精选进口优质原生木浆，超韧3层、湿水不易破，连金鱼也能轻松兜住！</p>
-        </section>
-        <section class="fl footer-middle ml-60">
-            <h6>雕琢每一个面向用户的细节</h6>
-            <p>时尚、高雅的蓝色主调配合象征幸福的动感立体扶郎花，运用全新翔飞品牌区，韧性品质给你带来前所未有的高端享受。</p>
-        </section>
-    </div>
-    <p class="tc mt-20">龙游翔飞有限公司   Copyright 2012-2015 浙ICP10204942号</p>
-</footer>
+        <article class="fr slider-right">
+            <h6 class="mb-25">30年的风雨兼程</h6>
+            <p class="mb-45">灵感来自亚平宁半岛的小雏菊，如温和的地中海阳光滋养美妙的生活。全新翔飞细韧系列，精选100%优质原生木浆，纸质纯净，更采用全新3D-DECO压花工艺，细腻柔韧，亲肤无刺激，健康更安心，最适合追求健康与安全的您！</p>
+            <a class="theme-btn" href="javascript:;">了解详情</a>
+        </article>
+    </section>
+    <footer class="footer">
+        <div class="wrap clearfix">
+            <section class="fl concat-way">
+                <h6>联系我们</h6>
+                <span>公司地址 ： 浙江省衢州市龙游县翔飞有限公司地址</span>
+                <span>联系电话 ： 150-6874-6735</span>
+                <span>我要合作 ： 150-6874-6735</span>
+            </section>
+            <section class="fl ml-60 footer-middle">
+                <h6>您的成功梦想需要一包非同凡响的纸巾</h6>
+                <p>韧-柔软与结实的出色演绎，纸巾要做到既柔软又结实并不容易，而翔飞产品永远在“韧”上追求卓越表现。全新韧性升级的翔飞超韧系列，精选进口优质原生木浆，超韧3层、湿水不易破，连金鱼也能轻松兜住！</p>
+            </section>
+            <section class="fl footer-middle ml-60">
+                <h6>雕琢每一个面向用户的细节</h6>
+                <p>时尚、高雅的蓝色主调配合象征幸福的动感立体扶郎花，运用全新翔飞品牌区，韧性品质给你带来前所未有的高端享受。</p>
+            </section>
+        </div>
+        <p class="tc mt-20">龙游翔飞有限公司   Copyright 2012-2015 浙ICP10204942号</p>
+    </footer>
+</div>
 <script src="scripts/jquery-3.2.1.js"></script>
+<script src="./scripts/vue.js"></script>
+<script src="scripts/template.js"></script>
+<script>
+
+</script>
+<!--分页插件-->
 <script src="scripts/swiper-3.4.2.jquery.min.js"></script>
 <script>
     var a = Math.random();var b = a > 0.9 ? 3 + a * 3 : 1 + a * 3;b
@@ -142,7 +152,8 @@
         paginationClickable :true,
     })
 </script>
-<script src="scripts/echo.js"></script>
+<!--图片懒加载插件-->
+<script src="scripts/echo.min.js"></script>
 <script>
     //图片懒加载
     Echo.init({
@@ -156,7 +167,7 @@ var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?429d8a2a57c58ab46f9099ccf750b225";
-  var s = document.getElementsByTagName("script")[0]; 
+  var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>

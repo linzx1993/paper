@@ -4,16 +4,21 @@
 body{
   line-height: 1.41;
   color: #333;
+  background-color: #f5f5f5;
 }
 .index-banner{
+  .swiper-container{
+    height: 100%;
+  }
   position: relative;
-  background: url("../assert/images/banner.jpg") no-repeat  50% 50% scroll;
-  background-size: cover;
+  height: 500px;
+  //background: url("../assert/images/banner.jpg") no-repeat  50% 50% scroll;
+  //background-size: cover;
   .banner-wrap{
-    height: 596px;
+    //height: 596px;
   }
   img{
-    height: 596px;
+    height: 100%;
   }
   .banner-word{
     position: absolute;
@@ -30,8 +35,45 @@ body{
     }
   }
 }
-.product-list{
-  height: 437px;
+.banner-title {
+  margin:0 0 25px 10px;
+  .banner-title-icon{
+    margin-right: 10px;
+    width: 31px;
+    height: 30px;
+    vertical-align: middle;
+    background: url("../assert/images/iconlist-1.png") no-repeat -130px -115px;
+    &.company{
+      background-position: -132px -407px;
+    }
+  }
+  h3{
+    font-size: 28px;
+    color: $titleColor;
+    cursor: pointer;
+    &:hover{
+      .banner-title-icon{
+        background-position-x: 0;
+      }
+    }
+  }
+  a{
+    margin-left: 20px;
+    padding: 0 10px;
+    min-width: 60px;
+    font-size: 14px;
+    color: #171717;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    &.active{
+      background-color: $themeColor;
+      color: #fff;
+    }
+  }
+}
+.index-product-list{
   padding-top: 80px;
   background-color: #f5f5f5;
   ul{
@@ -39,9 +81,19 @@ body{
     //justify-content: space-around;
   }
   li{
-    width: 25%;
-    padding: 0 25px;
-    //width: 226px;
+    margin: 0 10px;
+    width: calc(25% - 20px);
+    padding: 20px 15px 20px;
+    background-color: #fff;
+    transform: translate3d(0, 0, 0);
+    transition: transform .5s;
+    &:hover{
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+      transform: translate3d(0, -3px, 0);
+      transition: transform .5s;
+    }
+  }
+  img{
     height: 145px;
   }
   h6{
@@ -49,16 +101,6 @@ body{
   }
   p{
     color: $gray
-  }
-}
-.product-index-nav img{
-  position: relative;
-  top: 0;
-  transition: top .5s;
-  &:hover{
-    top: -3px;
-    box-shadow: 1px 1px 18px #999;
-    transition: top .5s;
   }
 }
 .theme-btn{

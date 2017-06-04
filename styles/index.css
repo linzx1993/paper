@@ -3,21 +3,22 @@
 /*主题色#1cacf4*/
 /*表格灰框颜色*/
 /*标题栏背景灰色*/
+/*标题颜色*/
 .c-theme-color {
   color: #1cacf4; }
 
 body {
   line-height: 1.41;
-  color: #333; }
+  color: #333;
+  background-color: #f5f5f5; }
 
 .index-banner {
   position: relative;
-  background: url("../assert/images/banner.jpg") no-repeat 50% 50% scroll;
-  background-size: cover; }
-  .index-banner .banner-wrap {
-    height: 596px; }
+  height: 500px; }
+  .index-banner .swiper-container {
+    height: 100%; }
   .index-banner img {
-    height: 596px; }
+    height: 100%; }
   .index-banner .banner-word {
     position: absolute;
     left: 100px;
@@ -28,27 +29,56 @@ body {
       font-size: 34px;
       font-weight: normal; }
 
-.product-list {
-  height: 437px;
+.banner-title {
+  margin: 0 0 25px 10px; }
+  .banner-title .banner-title-icon {
+    margin-right: 10px;
+    width: 31px;
+    height: 30px;
+    vertical-align: middle;
+    background: url("../assert/images/iconlist-1.png") no-repeat -130px -115px; }
+    .banner-title .banner-title-icon.company {
+      background-position: -132px -407px; }
+  .banner-title h3 {
+    font-size: 28px;
+    color: #576671;
+    cursor: pointer; }
+    .banner-title h3:hover .banner-title-icon {
+      background-position-x: 0; }
+  .banner-title a {
+    margin-left: 20px;
+    padding: 0 10px;
+    min-width: 60px;
+    font-size: 14px;
+    color: #171717;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle; }
+    .banner-title a.active {
+      background-color: #1cacf4;
+      color: #fff; }
+
+.index-product-list {
   padding-top: 80px;
   background-color: #f5f5f5; }
-  .product-list li {
-    width: 25%;
-    padding: 0 25px;
+  .index-product-list li {
+    margin: 0 10px;
+    width: calc(25% - 20px);
+    padding: 20px 15px 20px;
+    background-color: #fff;
+    transform: translate3d(0, 0, 0);
+    transition: transform .5s; }
+    .index-product-list li:hover {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      transform: translate3d(0, -3px, 0);
+      transition: transform .5s; }
+  .index-product-list img {
     height: 145px; }
-  .product-list h6 {
+  .index-product-list h6 {
     font-size: 18px; }
-  .product-list p {
+  .index-product-list p {
     color: #696969; }
-
-.product-index-nav img {
-  position: relative;
-  top: 0;
-  transition: top .5s; }
-  .product-index-nav img:hover {
-    top: -3px;
-    box-shadow: 1px 1px 18px #999;
-    transition: top .5s; }
 
 .theme-btn {
   width: 150px;

@@ -3,6 +3,7 @@
 /*主题色#1cacf4*/
 /*表格灰框颜色*/
 /*标题栏背景灰色*/
+/*标题颜色*/
 .c-theme-color {
   color: #1cacf4; }
 
@@ -48,6 +49,10 @@ input::-webkit-input-placeholder {
   color: #4b4b4b; }
 
 /*=========common.js===========*/
+.wrap {
+  width: 1200px;
+  margin: 0 auto; }
+
 .tl {
   text-align: left; }
 
@@ -245,10 +250,6 @@ img {
   height: 100%;
   vertical-align: middle;
   border: none; }
-
-.wrap {
-  width: 1200px;
-  margin: 0 auto; }
 
 /*常用颜色*/
 .c-999 {
