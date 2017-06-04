@@ -6,6 +6,9 @@
 .c-theme-color {
   color: #1cacf4; }
 
+.img {
+  background: url("../assert/images/loading.gif"); }
+
 /***********************头部********************/
 header {
   background-color: #fff; }
@@ -26,9 +29,6 @@ header {
         color: #fff; }
 
 /*******************************************/
-.swiper-pagination span {
-  cursor: pointer; }
-
 /***********************底部********************/
 .footer {
   height: 300px;

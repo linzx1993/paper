@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/swiper.min.css">
+    <link rel="icon" href="./assert/images/favicon.png" />
     <title>浙江龙游翔飞有限公司</title>
     <style>
         header{
@@ -60,24 +61,36 @@
 <section class="product-list product-index-nav">
     <nav class="wrap">
         <ul class="clearfix">
-            <li class="fl"><img src="assert/images/a.jpg" alt=""><h6 class="mb-5 mt-10">纸巾产品A</h6><p class="mb-15">翔飞的纸巾采用A技术，A泉的自来水和B地的木头</p><a class="theme-btn" href="./view/product/product-introduce.html">了解详情</a></li>
-            <li class="fl"><img src="assert/images/b.jpg" alt=""><h6 class="mb-5 mt-10">纸巾产品B</h6><p class="mb-15">翔飞的纸巾采用A技术，A泉的自来水和B地的木头</p><a class="theme-btn" href="./view/product/product-introduce.html">了解详情</a></li>
-            <li class="fl"><img src="assert/images/c.jpg" alt=""><h6 class="mb-5 mt-10">纸巾产品C</h6><p class="mb-15">翔飞的纸巾采用A技术，A泉的自来水和B地的木头</p><a class="theme-btn" href="./view/product/product-introduce.html">了解详情</a></li>
-            <li class="fl"><img src="assert/images/d.jpg" alt=""><h6 class="mb-5 mt-10">纸巾产品D</h6><p class="mb-15">翔飞的纸巾采用A技术，A泉的自来水和B地的木头</p><a class="theme-btn" href="./view/product/product-introduce.html">了解详情</a></li>
+            <li class="fl">
+                <img src="assert/images/blank.gif" alt="" data-echo="assert/images/a.jpg">
+                <h6 class="mb-5 mt-10">纸巾产品A</h6><p class="mb-15">翔飞的纸巾采用A技术，A泉的自来水和B地的木头</p><a class="theme-btn" href="./view/product/product-introduce.html">了解详情</a>
+            </li>
+            <li class="fl">
+                <img src="assert/images/blank.gif" alt="" data-echo="assert/images/b.jpg">
+                <h6 class="mb-5 mt-10">纸巾产品B</h6><p class="mb-15">翔飞的纸巾采用A技术，A泉的自来水和B地的木头</p><a class="theme-btn" href="./view/product/product-introduce.html">了解详情</a>
+            </li>
+            <li class="fl">
+                <img src="assert/images/blank.gif" alt="" data-echo="assert/images/c.jpg">
+                <h6 class="mb-5 mt-10">纸巾产品C</h6><p class="mb-15">翔飞的纸巾采用A技术，A泉的自来水和B地的木头</p><a class="theme-btn" href="./view/product/product-introduce.html">了解详情</a>
+            </li>
+            <li class="fl">
+                <img src="assert/images/blank.gif" alt="" data-echo="assert/images/d.jpg">
+                <h6 class="mb-5 mt-10">纸巾产品D</h6><p class="mb-15">翔飞的纸巾采用A技术，A泉的自来水和B地的木头</p><a class="theme-btn" href="./view/product/product-introduce.html">了解详情</a>
+            </li>
         </ul>
     </nav>
 </section>
 <section class="banner-middle">
-    <img src="assert/images/banner-middle.jpg" alt="">
+    <img src="assert/images/blank.gif" data-echo="assert/images/banner-middle.jpg" alt="">
 </section>
 <section class="product-slide wrap clearfix">
     <section class="fl mac-box">
         <div class="slide-box swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="assert/images/mac-b.jpg" alt="">
+                    <img src="assert/images/blank.gif" data-echo="assert/images/mac-b.jpg" alt="">
                 </div>
-                <div class="swiper-slide"><img src="assert/images/mac-a.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="assert/images/blank.gif" data-echo="assert/images/mac-a.jpg" alt=""></div>
             </div>
             <!-- 如果需要分页器 -->
             <div class="swiper-pagination"></div>
@@ -115,6 +128,7 @@
 <script src="scripts/jquery-3.2.1.js"></script>
 <script src="scripts/swiper-3.4.2.jquery.min.js"></script>
 <script>
+    var a = Math.random();var b = a > 0.9 ? 3 + a * 3 : 1 + a * 3;b
     var mySwiper = new Swiper ('.swiper-container', {
 //        direction: 'vertical',
         autoplay: 5000,
@@ -128,7 +142,16 @@
         paginationClickable :true,
     })
 </script>
+<script src="scripts/echo.js"></script>
 <script>
+    //图片懒加载
+    Echo.init({
+        offset: 0,
+        throttle: 0
+    });
+</script>
+<script>
+//百度统计代码
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");

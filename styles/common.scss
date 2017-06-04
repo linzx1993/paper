@@ -1,4 +1,8 @@
 @import "resetStyle.scss";
+//图片懒加载
+.img{
+  background: url("../assert/images/loading.gif");
+}
 /***********************头部********************/
 header{
   //position: absolute;
