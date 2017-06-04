@@ -73,7 +73,7 @@ body {
     transform: translate3d(0, 0, 0);
     transition: transform .5s; }
     .index-product-list li:hover {
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
       transform: translate3d(0, -3px, 0);
       transition: transform .5s; }
   .index-product-list img {
