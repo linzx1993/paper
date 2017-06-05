@@ -43,8 +43,11 @@ body{
     height: 30px;
     vertical-align: middle;
     background: url("../assert/images/iconlist-1.png") no-repeat -130px -115px;
-    &.company{
+    &.company-icon{
       background-position: -132px -407px;
+    }
+    &.recruitment-icon{
+      background-position: -129px -59px;
     }
   }
   h3{
@@ -86,7 +89,7 @@ body{
   li{
     margin: 0 10px;
     width: calc(25% - 20px);
-    padding: 20px 15px 20px;
+    padding: 15px 15px 40px;
     text-align: center;
     background-color: #fff;
     transform: translate3d(0, 0, 0);
@@ -119,7 +122,12 @@ body{
 .banner-middle{
   height: 312px;
 }
-.product-slide{
+.index-section{
+  margin-top: 50px;
+}
+
+/***********************公司历程********************/
+.company-section{
   margin: 110px auto 30px;
   //display: flex;
   //justify-content: space-between;
@@ -156,6 +164,10 @@ body{
   p{
     color: $litter-gray;
   }
+}
+/***********************诚聘英才********************/
+.recruitment-section{
+
 }
 /***********************关于我们********************/
 /***********************新闻列表********************/

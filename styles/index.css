@@ -37,8 +37,10 @@ body {
     height: 30px;
     vertical-align: middle;
     background: url("../assert/images/iconlist-1.png") no-repeat -130px -115px; }
-    .banner-title .banner-title-icon.company {
+    .banner-title .banner-title-icon.company-icon {
       background-position: -132px -407px; }
+    .banner-title .banner-title-icon.recruitment-icon {
+      background-position: -129px -59px; }
   .banner-title h3 {
     font-size: 28px;
     color: #576671;
@@ -67,7 +69,7 @@ body {
   .index-product-list li {
     margin: 0 10px;
     width: calc(25% - 20px);
-    padding: 20px 15px 20px;
+    padding: 15px 15px 40px;
     text-align: center;
     background-color: #fff;
     transform: translate3d(0, 0, 0);
@@ -95,21 +97,25 @@ body {
 .banner-middle {
   height: 312px; }
 
-.product-slide {
+.index-section {
+  margin-top: 50px; }
+
+/***********************公司历程********************/
+.company-section {
   margin: 110px auto 30px; }
-  .product-slide .mac-box {
+  .company-section .mac-box {
     width: 545px;
     height: 439px;
     background: url("../assert/images/mac.png") no-repeat;
     background-size: cover; }
-    .product-slide .mac-box .slide-box {
+    .company-section .mac-box .slide-box {
       margin-top: 22px;
       width: 507px;
       height: 281px; }
-      .product-slide .mac-box .slide-box img {
+      .company-section .mac-box .slide-box img {
         transform: scale(1);
         transition: transform .5s; }
-        .product-slide .mac-box .slide-box img:hover {
+        .company-section .mac-box .slide-box img:hover {
           transform: scale(1.2);
           transition: transform .5s; }
 
@@ -122,6 +128,7 @@ body {
   .slider-right p {
     color: #a9a9a9; }
 
+/***********************诚聘英才********************/
 /***********************关于我们********************/
 /***********************新闻列表********************/
 .container {
