@@ -3,7 +3,7 @@
  */
 const path = require('path');
 const webpack = require("webpack");
-// const WebpackDevServer = require('webpack-dev-server');
+const WebpackDevServer = require('webpack-dev-server');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const extractSass = new ExtractTextPlugin({
     filename: "[name].[contenthash].css",
@@ -13,11 +13,10 @@ const extractSass = new ExtractTextPlugin({
 module.exports  = {
     entry : "./main.js",
     output : {
-        path: "./dist",
-        //path.resolve(__dirname, "dist")
+        path: path.resolve(__dirname, "dist"),
         filename: "[name]-[hash].js"
     },
-    devtool: 'cheap-module-eval-source-map',//配置生成Source Maps，选择合适的选项
+    // devtool: 'cheap-module-eval-source-map',//配置生成Source Maps，选择合适的选项
     module : {
         rules : [
             {
@@ -38,22 +37,69 @@ module.exports  = {
                 },
             },
             {
-                test: /\.scss$/,
-                use: [extractSass.extract({
-                    use : [
-                        {loader : "css-loader"},
-                        {loader : "sass-loader",options : {sourceMap: true}},
-                    ],
-                    fallback: "style-loader"
-                })]
+                test: /\.(png|jpg|gif)$/,
+                use :[
+                    //加载url-loader 同时安装 file-loader;
+                    {
+                        loader : 'url-loader',
+                        options : {
+                            //小于10000K的图片文件转base64到css里,当然css文件体积更大;
+                            limit : 10000,
+                            name : './[name]-[hash].[ext]'
+                        }
+                    },
+                    //压缩图片(另一个压缩图片：image-webpack-loader);
+                    // {loader : "img-loader?minimize&optimizationLevel=5&progressive=true"}
+                ]
+            },
+            {
+                test: /\.css$/,
+                        // use: [ 'style-loader', 'css-loader' ],
+                        use: ExtractTextPlugin.extract({
+                                use: 'css-loader'
+                        })
+            },
+            {
+                test: /\.(sass|scss)$/,
+                use: ExtractTextPlugin.extract({
+                    use: [
+                        {
+                            loader: 'css-loader?importLoaders=1',
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            //配置参数;
+                            options: {
+                                plugins: function () {
+                                    return [
+                                        require('autoprefixer')({
+                                            browsers: ['ios >= 7.0']
+                                        })
+                                    ];
+                                }
+                            }
+                        },
+                        {
+                            //加载sass-loader同时也得安装node-sass;
+                            loader: "sass-loader",
+                            //配置参数;
+                            options: {
+                                //sass的sourceMap
+                                sourceMap: true,
+                                //输出css的格式两个常用选项:compact({}行), compressed(压缩一行)
+                                outputStyle: 'compact'
+                            }
+                        }
+
+                    ]
+
+                })
             }
         ],
     },
-    postcss: [
-        require('autoprefixer')
-    ],
     plugins: [
-        extractSass,
+        // extractSass,
+        new ExtractTextPlugin('styles.css'),
         new webpack.HotModuleReplacementPlugin()//热加载插件
     ],
     devServer: {
