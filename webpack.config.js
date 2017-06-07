@@ -1,15 +1,16 @@
 /**
  * Created by linzx on 2017/6/5.
  */
-const webpack = require('webpack');
 const path = require('path');
+const webpack = require("webpack");
+// const WebpackDevServer = require('webpack-dev-server');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const extractSass = new ExtractTextPlugin({
     filename: "[name].[contenthash].css",
     disable: process.env.NODE_ENV === "development"
 });
 
-module.exports = {
+module.exports  = {
     entry : "./main.js",
     output : {
         path: "./dist",
@@ -20,11 +21,11 @@ module.exports = {
     module : {
         rules : [
             {
-                test : /\.json/,
+                test : /\.json$/,
                 loader : "json-loader"
             },
             {
-                test : /\.js/,
+                test : /\.js$/,
                 loader : "babel-loader",
                 include: [
                     path.resolve(__dirname,"./dist/scripts")
@@ -48,17 +49,17 @@ module.exports = {
             }
         ],
     },
-    // postcss: [
-    //     require('autoprefixer')
-    // ],
-    // plugins: [
-    //     extractSass,
-    //     new webpack.HotModuleReplacementPlugin()//热加载插件
-    // ],
-    // devServer: {
-    //     contentBase: "./dist",//本地服务器所加载的页面所在的目录
-    //     colors: true,//终端中输出结果为彩色
-    //     historyApiFallback: true,//不跳转
-    //     inline: true//实时刷新
-    // }
+    postcss: [
+        require('autoprefixer')
+    ],
+    plugins: [
+        extractSass,
+        new webpack.HotModuleReplacementPlugin()//热加载插件
+    ],
+    devServer: {
+        contentBase: "./dist",//本地服务器所加载的页面所在的目录
+        colors: true,//终端中输出结果为彩色
+        historyApiFallback: true,//不跳转
+        inline: true//实时刷新
+    }
 };
