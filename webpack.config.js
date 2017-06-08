@@ -5,6 +5,7 @@ const path = require('path');
 const webpack = require("webpack");
 const WebpackDevServer = require('webpack-dev-server');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');          //html模板模块;
 const extractSass = new ExtractTextPlugin({
     filename: "[name].[contenthash].css",
     disable: process.env.NODE_ENV === "development"
@@ -36,6 +37,7 @@ module.exports  = {
                     presets: ["es2015"]
                 },
             },
+            //image
             {
                 test: /\.(png|jpg|gif)$/,
                 use :[
@@ -49,16 +51,35 @@ module.exports  = {
                         }
                     },
                     //压缩图片(另一个压缩图片：image-webpack-loader);
-                    // {loader : "img-loader?minimize&optimizationLevel=5&progressive=true"}
+                    {loader : "img-loader?minimize&optimizationLevel=5&progressive=true"}
                 ]
             },
+            //css
             {
                 test: /\.css$/,
                         // use: [ 'style-loader', 'css-loader' ],
+                //加载css-loader、postcss-loader（编译顺序从下往上）转译css
                         use: ExtractTextPlugin.extract({
-                                use: 'css-loader'
+                                use: [
+                                    {
+                                        loader : 'css-loader?importLoaders=1',
+                                    },
+                                    {
+                                        loader : "postcss-loader",
+                                        options : {
+                                            plugins : function () {
+                                                return [
+                                                    require('autoprefixer')({
+                                                        browsers: ['ios >= 7.0']
+                                                    })
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ]
                         })
             },
+            //scss
             {
                 test: /\.(sass|scss)$/,
                 use: ExtractTextPlugin.extract({
@@ -98,6 +119,10 @@ module.exports  = {
         ],
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            filename : 'index.html',
+            template : __dirname + "/index.html"
+        }),
         // extractSass,
         new ExtractTextPlugin('styles.css'),
         new webpack.HotModuleReplacementPlugin()//热加载插件
