@@ -20,10 +20,12 @@ module.exports  = {
     // devtool: 'cheap-module-eval-source-map',//配置生成Source Maps，选择合适的选项
     module : {
         rules : [
-            {
-                test : /\.json$/,
-                loader : "json-loader"
-            },
+            // //json
+            // {
+            //     test : /\.json$/,
+            //     loader : "json-loader"
+            // },
+            //js
             {
                 test : /\.js$/,
                 loader : "babel-loader",
@@ -124,7 +126,9 @@ module.exports  = {
             template : __dirname + "/index.html"
         }),
         // extractSass,
-        new ExtractTextPlugin('styles.css'),
+        new ExtractTextPlugin({
+           filename : '[name].css'                //设置最后css路径、名称;
+        }),
         new webpack.HotModuleReplacementPlugin()//热加载插件
     ],
     devServer: {
