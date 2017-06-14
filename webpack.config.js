@@ -6,10 +6,6 @@ const webpack = require("webpack");
 const WebpackDevServer = require('webpack-dev-server');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');          //html模板模块;
-const extractSass = new ExtractTextPlugin({
-    filename: "[name].[contenthash].css",
-    disable: process.env.NODE_ENV === "development"
-});
 
 module.exports  = {
     entry : "./main.js",
