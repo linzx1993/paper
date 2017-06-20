@@ -2,18 +2,44 @@
  * Created by linzx on 2017/6/5.
  */
 const path = require('path');
+const glob = require("glob");
 const webpack = require("webpack");
 const WebpackDevServer = require('webpack-dev-server');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');          //html模板模块;
 
+function getEntry(globPath) {
+    var entries = {},
+        basename, tmp, pathname;
+    if (typeof (globPath) != "object") {
+        globPath = [globPath]
+    }
+    globPath.forEach((itemPath) => {
+        glob.sync(itemPath).forEach(function (entry) {
+            basename = path.basename(entry, path.extname(entry));
+            entries[pathname] = entry;
+            // if (entry.split('/').length > 4) {
+            //     tmp = entry.split('/').slice(0);
+            //     pathname = tmp.join("/") + "/" + basename; // 正确输出js和html的路径
+            //     entries[pathname] = entry;
+            // } else {
+            //     entries[basename] = entry;
+            // }
+        });
+    });
+    console.log(entries);
+    return entries;
+}
+const entireJs = getEntry(["./scripts/*.js"]);
+
 module.exports  = {
     entry : "./main.js",
+    // entry : entireJs,
     output : {
         path: path.resolve(__dirname, "dist"),
         filename: "[name]-[hash].js"
     },
-    // devtool: 'cheap-module-eval-source-map',//配置生成Source Maps，选择合适的选项
+    devtool: 'cheap-module-eval-source-map',//配置生成Source Maps，选择合适的选项
     module : {
         rules : [
             // //json
@@ -134,3 +160,23 @@ module.exports  = {
         inline: true//实时刷新
     }
 };
+
+const pages = getEntry(["./index.html","./view/**/*.html"]);
+for (var pathname in pages) {
+    // console.log(pathname);
+    // 配置生成的html文件，定义路径等
+    var conf = {
+        filename: pathname + '.html',
+        template: pages[pathname],   // 模板路径
+        inject: true,              // js插入位置
+        // necessary to consistently work with multiple chunks via CommonsChunkPlugin
+        chunksSortMode: 'dependency'
+    };
+
+    // if (pathname in module.exports.entry) {
+    //     conf.chunks = ['manifest', 'vendor', pathname];
+    //     conf.hash = true;
+    // }
+
+    module.exports.plugins.push(new HtmlWebpackPlugin(conf));
+}
