@@ -1,0 +1,208 @@
+@import 'resetStyle.scss';
+
+body{
+  line-height: 1.41;
+  color: #333;
+  background-color: #f5f5f5;
+}
+.index-banner{
+  .swiper-container{
+    height: 100%;
+  }
+  position: relative;
+  height: 500px;
+  //background: url("../assets/images/banner.jpg") no-repeat  50% 50% scroll;
+  //background-size: cover;
+  .banner-wrap{
+    //height: 596px;
+  }
+  img{
+    height: 100%;
+    width: 100%;
+  }
+  .banner-word{
+    position: absolute;
+    left: 100px;
+    top: 400px;
+    color: #fff;
+    .banner-title{
+      margin-bottom: 5px;
+      font-size: 34px;
+      font-weight: normal;
+    }
+    .banner-text{
+
+    }
+  }
+}
+.banner-title {
+  margin:0 0 25px 10px;
+  .banner-title-icon{
+    margin-right: 10px;
+    width: 31px;
+    height: 30px;
+    vertical-align: middle;
+    background: url("../assets/images/iconlist-1.png") no-repeat -130px -115px;
+    &.company-icon{
+      background-position: -132px -407px;
+    }
+    &.recruitment-icon{
+      background-position: -129px -59px;
+    }
+  }
+  h3{
+    font-size: 28px;
+    color: $titleColor;
+    cursor: pointer;
+    &:hover{
+      .banner-title-icon{
+        background-position-x: 0;
+      }
+    }
+  }
+  a{
+    margin-left: 20px;
+    padding: 0 10px;
+    min-width: 60px;
+    font-size: 14px;
+    color: #171717;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    &:hover{
+      color: $themeColor;
+    }
+    &.active{
+      background-color: $themeColor;
+      color: #fff;
+    }
+  }
+}
+.index-product-list{
+  padding-top: 80px;
+  background-color: #f5f5f5;
+  ul{
+    //display: flex;
+    //justify-content: space-around;
+  }
+  li{
+    margin: 0 10px;
+    width: calc(25% - 20px);
+    padding: 15px 15px 40px;
+    text-align: center;
+    background-color: #fff;
+    transform: translate3d(0, 0, 0);
+    transition: transform .5s;
+    &:hover{
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      transform: translate3d(0, -3px, 0);
+      transition: transform .5s;
+    }
+  }
+  img{
+    height: 145px;
+  }
+  h6{
+    font-size: 18px;
+  }
+  p{
+    color: $gray
+  }
+}
+.theme-btn{
+  width: 150px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: #fff;
+  background-color: $themeColor;
+  border-radius: 10px;
+}
+.banner-middle{
+  height: 312px;
+}
+.index-section{
+  margin-top: 50px;
+}
+
+/***********************公司历程********************/
+.company-section{
+  margin: 110px auto 30px;
+  //display: flex;
+  //justify-content: space-between;
+  .mac-box{
+    width: 545px;
+    height: 439px;
+    background: url("../assets/images/mac.png") no-repeat;
+    background-size: cover;
+    .slide-box{
+      margin-top: 22px;
+      width: 507px;
+      height: 281px;
+      img{
+        transform: scale(1);
+        transition: transform .5s;
+        &:hover{
+          transform: scale(1.2);
+          transition: transform .5s;
+        }
+      }
+      .swiper-wrapper{
+        //margin: 22px auto 0;
+      }
+    }
+  }
+}
+.slider-right{
+  margin-top: 95px;
+  width: 425px;
+  h6{
+    font-weight: normal;
+    font-size: 34px;
+  }
+  p{
+    color: $litter-gray;
+  }
+}
+/***********************诚聘英才********************/
+.recruitment-section{
+
+}
+/***********************关于我们********************/
+/***********************新闻列表********************/
+.container{
+  margin: 30px auto;
+  padding: 20px 30px;
+  position: relative;
+  width: 1000px;
+  min-height: 500px;
+  background-color: #fff;
+}
+.news-box{
+  padding: 30px 60px;
+  //background-color: #fff;
+}
+
+.news_title{
+  padding-bottom: 30px;
+  text-align: center;
+  color: $themeColor;
+  font-size: 18px;
+}
+.news-list li{
+  span{
+    float: right;
+    color: #999;
+  }
+  a{
+    color: #666;
+  }
+  padding-right: 10px;
+  height: 46px;
+  line-height: 46px;
+  border-bottom: 1px dashed #eee;
+  list-style: disc;
+  list-style-position: inside;
+  color: $themeColor;
+}

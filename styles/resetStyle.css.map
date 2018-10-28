@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": ";;;;;;AAUA,cAAc;EAAC,KAAK,EAPN,OAAe",
-"sources": ["resetStyle.scss"],
-"names": [],
-"file": "resetStyle.css"
-}
